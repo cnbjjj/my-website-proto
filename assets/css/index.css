@@ -1,0 +1,136 @@
+@charset "utf-8";
+
+body {
+    font-family: 'Poppins', 'Open Sans', Arial, sans-serif;
+    font-weight: 300;
+    background-color: #f9f9fa;
+}
+
+h1, h2, h3, p, strong, em, a {
+    color: #fff;
+}
+
+.container {
+    width: min(100% - 30px, 1080px);
+    margin-inline: auto;
+}
+
+/* 
+    Utility classes 
+*/
+
+.flex {
+    display: flex;
+}
+
+.flex-sb {
+    justify-content: space-between;
+}
+
+.flex-center {
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+}
+
+.grid-center {
+    place-items: center;
+}
+
+.gap-50 {
+    gap: 50px;
+}
+
+.gap-20 {
+    gap: 20px;
+}
+
+.gap-10 {
+    gap: 10px;
+}
+
+.main-color {
+    background-color: #71a0a5;
+}
+
+/* 
+    Header 
+*/
+
+header {
+    height: 60px;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+}
+
+header .container {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+h1 {
+    font-size: 26px;
+    font-weight: 500;
+    color: #fff;
+    line-height: 60px;
+}
+
+nav ul li {
+    line-height: 60px;
+    list-style: none;
+    cursor: default;
+}
+
+nav ul li a {
+    color: rgb(255 255 255 / 1);
+    font-weight: 400;
+    font-size: 17px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.25s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #00e6ff;
+}
+
+/* 
+    Main
+*/
+
+.landing {
+    height: 100svh;
+    background: #71a0a5 url("../img/landing-01.jpg") 10% center / cover no-repeat;
+}
+
+/* 
+    Footer 
+*/
+
+.contact {
+    height: 80px;
+}
+
+.contact li {
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    list-style: none;
+    border-radius: 50%;
+    border: 1px solid #ededed;
+}
+
+.contact i {
+    color: #fff;
+    font-size: 14px;
+}
+
+.copyright {
+    color: #fff;
+    height: 80px;
+    line-height: 80px;
+    text-align: right;
+}
