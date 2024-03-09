@@ -1,7 +1,8 @@
 ## Portfolio Website Prototype
 
-A prototype of personal portfoio website. 
-Click [here](https://cnbjjj.github.com/my-website-proto) to view
+Prototype of my portfolio website. 
+
+Click [here](https://cnbjjj.github.io/my-website-proto/) to view
 
 <br />
 
