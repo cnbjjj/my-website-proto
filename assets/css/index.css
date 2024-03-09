@@ -17,6 +17,7 @@ body {
     margin-inline: auto;
 }
 
+
 /* 
     Utility classes 
 */
@@ -31,6 +32,10 @@ body {
 
 .flex-center {
     align-items: center;
+}
+
+.flex-start {
+    align-items: flex-start;
 }
 
 .grid {
@@ -53,22 +58,16 @@ body {
     gap: 10px;
 }
 
+
 /* 
     Header 
 */
 
 header {
     height: 80px;
-    width: 100%;
-    position: fixed;
-    z-index: 10;
     padding: 10px 0;
-    background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-
     img {
-        width: 50px;
+        width: 25px;
         height: auto;
     }
 }
@@ -87,8 +86,8 @@ nav ul li {
 
 nav ul li a {
     color: var(--color);
-    font-weight: 500;
     font-size: 16px;
+    font-weight: 500;
     text-decoration: none;
     cursor: pointer;
     transition: color 0.25s ease-in-out;
@@ -96,85 +95,60 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #000;
+    text-decoration: underline;
 }
+
 
 /* 
     Main
 */
 
-.landing {
-    height: 100svh;
-    background: radial-gradient(circle 50svh at 50% 50%, #00ff00 0%, #00ff0000 100%);
-
-    .container {
-        height: 100%;
-    }
-
-    overflow: hidden;
-}
-
-.portrait {
-    position: absolute;
-    width: 50%;
-    left: 50%;
-    zoom: 1.2;
-    opacity: 1;
-    display: none;
-
-    .txt {
-        position: absolute;
-        top: 0;
-        left: 0;
-        font-size: 14px;
-        /* width: 14px;
-        height: 14px; */
-        line-height: 14px;
-        /* min-width: 12px; */
-        font-weight: 500;
-        cursor: default;
-        transition: all 0.1s ease-in-out;
-    }
-
-    .txt:hover {
-        font-size: 18px;
-        line-height: 18px;
-    }
-}
-
 main>section {
     min-height: 100svh;
 }
 
-.about {
+.landing {
+    height: 100svh;
+    background: radial-gradient(circle 50svh at 50% 50%, #00ff00 0%, #00ff0000 100%);
+    .container {
+        height: 100%;
+    }
+}
 
-    position: absolute;
-    bottom: 25%;
-    width: 50%;
-
-    h1 {
+.about,
+.portfolio,
+.contact {
+    h2 {
         font-size: 85px;
         font-weight: 600;
         color: transparent;
         -webkit-text-stroke: 1px var(--color);
+    }
+}
+
+.about {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    >div {
+        width: 50%;
+    }
+    h2 {
         margin-bottom: 30px;
     }
-
     p {
         font-size: 30px;
         font-weight: 600;
         line-height: 35px;
-        max-width: 80%;
     }
-
     .skills {
+        font-size: 18px;
+        font-weight: 600;
+        margin: 30px 0;
         border: 1px solid var(--color);
         border-left: 0;
         border-right: 0;
         padding: 10px 0;
-        font-size: 18px;
-        margin: 30px 0;
-        font-weight: 600;
-
         .skill {
             margin: 0 10px;
         }
@@ -183,29 +157,15 @@ main>section {
 
 .portfolio {
     background: radial-gradient(circle 50svh at 50% 50%, #29abe2 0%, #29abe200 100%);
-
-
-    >div {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: 20px;
+    &>div {
         width: 100%;
     }
-
     .portfolio-info {
         padding: 50px 0;
         width: 45%;
-
         h2 {
-            font-size: 85px;
-            font-weight: 600;
-            color: transparent;
-            -webkit-text-stroke: 1px var(--color);
-            line-height: 1;
             margin-bottom: 20px;
         }
-
         p {
             font-weight: 400;
             width: 70%;
@@ -215,97 +175,155 @@ main>section {
     .project {
         padding: 50px 0;
         min-width: 45%;
-
         +.project {
             border-top: 1px solid var(--color);
         }
-
         img {
             max-width: 100%;
             max-height: 100%;
         }
-
         h4 {
-            text-align: left;
             font-size: 28px;
             font-weight: 500;
-            margin-bottom: 10px;
+            text-align: left;
         }
-
         p {
-            width: 280px;
             font-size: 15px;
             font-weight: 500;
             line-height: 1.2;
+            width: 280px;
         }
-
         .project-info {
             align-content: end;
             place-items: self-start;
         }
     }
-
-
 }
 
 .contact {
     background: radial-gradient(circle 50svh at 50% 50%, #c69c6d 0%, #c69c6d00 100%);
     text-align: center;
     padding: 50px 0;
-    /* min-height: 80svh; */
-
-
-    h2 {
-        font-size: 85px;
-        font-weight: 500;
-        color: transparent;
-        -webkit-text-stroke: 1px var(--color);
-    }
-
     p {
         font-size: 22px;
         font-weight: 600;
         width: 70%;
         margin: auto;
     }
-
     .social {
         height: 80px;
         margin: 20px;
     }
-
     .social li {
         text-align: center;
         list-style: none;
         display: inline-block;
         margin: 20px 20px;
     }
-
     .social i {
         color: var(--color);
         font-size: 36px;
     }
-
 }
+
 
 /* 
     Footer 
 */
 
+header,
 footer {
     position: fixed;
     z-index: 10;
-    bottom: 0;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
 
+footer {
+    bottom: 0;
+}
+
 .copyright {
+    font-size: 14px;
+    font-weight: 500;
     height: 80px;
     line-height: 80px;
     text-align: right;
-    font-size: 14px;
-    font-weight: 500;
+}
+
+
+/*
+    Adaptive
+*/
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+        width: 100%;
+    }
+    .about,
+    .portfolio,
+    .contact {
+        h2 {
+            font-size: 45px;
+        }
+        p {
+            font-size: 15px;
+            font-weight: 400;
+        }
+    }
+    .about {
+        display: grid;
+        place-items: center;
+        padding-top: 100px;
+        >div {
+            width: 90%;
+            text-align: center;
+        }
+        p {
+            max-width: 100%;
+            line-height: 1.2;
+        }
+    }
+    .portfolio {
+        >div {
+            display: block;
+        }
+        .portfolio-info {
+            padding: 50px 0;
+            width: 100%;
+            text-align: center;
+            p {
+                width: 100%;
+                padding: 0 25px;
+            }
+        }
+        .portfolio-project {
+            display: block;
+        }
+        .project {
+            min-width: 100%;
+            flex-direction: column;
+            place-items: center;
+            padding: 10px 0;
+            p {
+                font-size: 12px;
+                font-weight: 300;
+            }
+            .project-info {
+                h4 {
+                    font-size: 15px;
+                    text-align: center;
+                }
+                align-content: inherit;
+                place-items: inherit;
+                text-align: center;
+            }
+            +.project {
+                border-top: none;
+            }
+        }
+    }
 }
