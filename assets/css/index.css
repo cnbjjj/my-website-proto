@@ -63,7 +63,9 @@ header {
     position: fixed;
     z-index: 10;
     padding: 10px 0;
-    background-color: var(--bg-color);
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 
     img {
         width: 50px;
@@ -102,7 +104,7 @@ nav ul li a:hover {
 
 .landing {
     height: 100svh;
-    background: radial-gradient(circle 250px at 25% 50%, #00ff00 0%, #00ff0000 100%);
+    background: radial-gradient(circle 50svh at 50% 50%, #00ff00 0%, #00ff0000 100%);
 
     .container {
         height: 100%;
@@ -117,6 +119,7 @@ nav ul li a:hover {
     left: 50%;
     zoom: 1.2;
     opacity: 1;
+    display: none;
 
     .txt {
         position: absolute;
@@ -128,7 +131,7 @@ nav ul li a:hover {
         line-height: 14px;
         /* min-width: 12px; */
         font-weight: 500;
-        cursor:default;
+        cursor: default;
         transition: all 0.1s ease-in-out;
     }
 
@@ -138,18 +141,18 @@ nav ul li a:hover {
     }
 }
 
-section {
-    min-height: 500px;
+main>section {
+    min-height: 100svh;
 }
 
 .about {
 
     position: absolute;
-    bottom: 30%;
+    bottom: 25%;
     width: 50%;
 
     h1 {
-        font-size: 80px;
+        font-size: 85px;
         font-weight: 600;
         color: transparent;
         -webkit-text-stroke: 1px var(--color);
@@ -158,8 +161,9 @@ section {
 
     p {
         font-size: 30px;
-        font-weight: 500;
+        font-weight: 600;
         line-height: 35px;
+        max-width: 80%;
     }
 
     .skills {
@@ -168,7 +172,7 @@ section {
         border-right: 0;
         padding: 10px 0;
         font-size: 18px;
-        margin: 15px 0;
+        margin: 30px 0;
         font-weight: 600;
 
         .skill {
@@ -178,35 +182,61 @@ section {
 }
 
 .portfolio {
-    background: radial-gradient(circle 200px at 75% 50%, #29abe2 0%, #29abe200 100%);
-    margin: 80px auto;
+    background: radial-gradient(circle 50svh at 50% 50%, #29abe2 0%, #29abe200 100%);
+
 
     >div {
-        width: 55%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .portfolio-info {
+        padding: 50px 0;
+        width: 45%;
+
+        h2 {
+            font-size: 85px;
+            font-weight: 600;
+            color: transparent;
+            -webkit-text-stroke: 1px var(--color);
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-weight: 400;
+            width: 70%;
+        }
     }
 
     .project {
         padding: 50px 0;
+        min-width: 45%;
 
         +.project {
             border-top: 1px solid var(--color);
         }
 
         img {
-            border: 1px solid #efefef;
-            width: 350px;
-            height: 185px;
+            max-width: 100%;
+            max-height: 100%;
         }
 
         h4 {
             text-align: left;
-            font-size:20px;
+            font-size: 28px;
+            font-weight: 500;
             margin-bottom: 10px;
         }
 
         p {
             width: 280px;
-            font-size: 14px;
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 1.2;
         }
 
         .project-info {
@@ -215,39 +245,28 @@ section {
         }
     }
 
-    >div:nth-child(2) {
-        width: 45%;
-        padding: 0 50px;
-
-        h2 {
-            font-size: 80px;
-            font-weight: 600;
-            color: transparent;
-            -webkit-text-stroke: 1px var(--color);
-        }
-
-        p {
-            font-weight: 400;
-        }
-    }
-
 
 }
 
 .contact {
-    background: radial-gradient(circle 200px at 50% 50%, #c69c6d 0%, #c69c6d00 100%);
+    background: radial-gradient(circle 50svh at 50% 50%, #c69c6d 0%, #c69c6d00 100%);
     text-align: center;
     padding: 50px 0;
+    /* min-height: 80svh; */
+
 
     h2 {
-        font-size: 80px;
+        font-size: 85px;
         font-weight: 500;
         color: transparent;
         -webkit-text-stroke: 1px var(--color);
     }
 
     p {
-        font-weight: 400;
+        font-size: 22px;
+        font-weight: 600;
+        width: 70%;
+        margin: auto;
     }
 
     .social {
@@ -274,15 +293,19 @@ section {
 */
 
 footer {
-    padding: 30px;
-
-    >div {
-        border-top: 1px solid var(--color);
-    }
+    position: fixed;
+    z-index: 10;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .copyright {
     height: 80px;
     line-height: 80px;
     text-align: right;
+    font-size: 14px;
+    font-weight: 500;
 }
