@@ -132,6 +132,10 @@ main>section {
         color: transparent;
         -webkit-text-stroke: 1px var(--color);
     }
+    p {
+        font-size: 15px;
+        font-weight: 400;
+    }
 }
 
 .about {
@@ -175,7 +179,6 @@ main>section {
             margin-bottom: 20px;
         }
         p {
-            font-weight: 400;
             width: 70%;
         }
     }
@@ -196,14 +199,16 @@ main>section {
             text-align: left;
         }
         p {
-            font-size: 15px;
-            font-weight: 500;
             line-height: 1.2;
             width: 280px;
         }
         .project-info {
             align-content: end;
             place-items: self-start;
+        }
+
+        .project-info p {
+            font-weight: 300;
         }
     }
 }
@@ -213,8 +218,6 @@ main>section {
     text-align: center;
     padding: 50px 0;
     p {
-        font-size: 22px;
-        font-weight: 600;
         width: 70%;
         margin: auto;
     }
