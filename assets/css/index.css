@@ -124,6 +124,10 @@ main>section {
         color: transparent;
         -webkit-text-stroke: 1px var(--color);
     }
+    p {
+        font-size: 15px;
+        font-weight: 300;
+    }
 }
 
 .about {
@@ -188,8 +192,8 @@ main>section {
             text-align: left;
         }
         p {
-            font-size: 15px;
-            font-weight: 500;
+            /* font-size: 15px;
+            font-weight: 500; */
             line-height: 1.2;
             width: 280px;
         }
@@ -205,8 +209,7 @@ main>section {
     text-align: center;
     padding: 50px 0;
     p {
-        font-size: 22px;
-        font-weight: 600;
+        font-weight: 400;
         width: 70%;
         margin: auto;
     }
