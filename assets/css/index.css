@@ -58,7 +58,15 @@ body {
     gap: 10px;
 }
 
-
+.ct-25 {
+    flex: 0 0 25%;
+    min-width: 25%;
+}
+  
+.ct-50 {
+    flex: 0 0 50%;
+    min-width: 50%;
+}
 /* 
     Header 
 */
@@ -263,6 +271,17 @@ footer {
         padding: 0 15px;
         width: 100%;
     }
+
+    .ct-25 {
+        flex: 0 0 100%;
+        min-width: 100%;
+    }
+    
+    .ct-50 {
+        flex: 0 0 100%;
+        min-width: 100%;
+    }
+
     .about,
     .portfolio,
     .contact {
